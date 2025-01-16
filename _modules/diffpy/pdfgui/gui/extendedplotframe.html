@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>diffpy.pdfgui.gui.extendedplotframe &mdash; diffpy.pdfgui 3.1.0rc6 documentation</title>
+  <title>diffpy.pdfgui.gui.extendedplotframe &mdash; diffpy.pdfgui 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=e3a9b952"></script>
+      <script src="../../../../_static/documentation_options.js?v=f539c95a"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -88,7 +88,10 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
-<span class="sd">&quot;&quot;&quot;The module contains extensions for GUI plot frame.&quot;&quot;&quot;</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The module contains extensions for GUI plot frame.</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os.path</span>
 
@@ -137,8 +140,8 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;An extended plotting frame with a save and close button.</span>
 
 <span class="sd">    The class has a matplotlib.figure.Figure data member named &#39;figure&#39;.</span>
-<span class="sd">    It also has a matplotlib.axes.Axes data member named &#39;axes&#39;. The</span>
-<span class="sd">    normal matplotlib plot manipulations can be performed with these two</span>
+<span class="sd">    It also has a matplotlib.axes.Axes data member named &#39;axes&#39;.</span>
+<span class="sd">    The normal matplotlib plot manipulations can be performed with these two</span>
 <span class="sd">    data members. See the matplotlib API at:</span>
 <span class="sd">    http://matplotlib.sourceforge.net/classdocs.html</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -267,14 +270,14 @@
 <div class="viewcode-block" id="ExtendedPlotFrame.replot">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.extendedplotframe.ExtendedPlotFrame.replot">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">replot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Officially call function in matplotlib to do drawing.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;officially call function in matplotlib to do drawing&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span></div>
 
 
 <div class="viewcode-block" id="ExtendedPlotFrame.insertCurve">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.extendedplotframe.ExtendedPlotFrame.insertCurve">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">insertCurve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xData</span><span class="p">,</span> <span class="n">yData</span><span class="p">,</span> <span class="n">style</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Insert a new curve to the plot.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;insert a new curve to the plot</span>
 
 <span class="sd">        xData, yData -- x, y data to used for the curve</span>
 <span class="sd">        style -- the way curve should be plotted</span>
@@ -295,7 +298,7 @@
 <div class="viewcode-block" id="ExtendedPlotFrame.updateData">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.extendedplotframe.ExtendedPlotFrame.updateData">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">updateData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curveRef</span><span class="p">,</span> <span class="n">xData</span><span class="p">,</span> <span class="n">yData</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update data for a existing curve.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;update data for a existing curve</span>
 
 <span class="sd">        curveRef -- internal reference to a curve</span>
 <span class="sd">        xData, yData -- x, y data to used for the curve</span>
@@ -311,7 +314,7 @@
 <div class="viewcode-block" id="ExtendedPlotFrame.changeStyle">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.extendedplotframe.ExtendedPlotFrame.changeStyle">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">changeStyle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curveRef</span><span class="p">,</span> <span class="n">style</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Change curve style.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;change curve style</span>
 
 <span class="sd">        curveRef -- internal reference to curves</span>
 <span class="sd">        style -- style dictionary</span>
@@ -326,7 +329,7 @@
 <div class="viewcode-block" id="ExtendedPlotFrame.removeCurve">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.extendedplotframe.ExtendedPlotFrame.removeCurve">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">removeCurve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curveRef</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove curve from plot.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;remove curve from plot</span>
 
 <span class="sd">        curveRef -- internal reference to curves</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -337,7 +340,7 @@
 
 
     <span class="k">def</span><span class="w"> </span><span class="nf">__updateViewLimits</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adjust the subplot range in order to show all curves correctly.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;adjust the subplot range in order to show all curves correctly.&quot;&quot;&quot;</span>
         <span class="c1"># NOTE:</span>
         <span class="c1"># we need to adjust view limits by ourselves because Matplotlib can&#39;t</span>
         <span class="c1"># set the legend nicely when there are multiple curves in the plot.</span>
@@ -365,8 +368,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">subplot</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">__translateStyles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">style</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Private function to translate general probabilities to Matplotlib</span>
-<span class="sd">        specific ones.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Private function to translate general probabilities to</span>
+<span class="sd">        Matplotlib specific ones</span>
 
 <span class="sd">        style -- general curve style dictionary (defined in demoplot)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -433,7 +436,7 @@
 <div class="viewcode-block" id="ExtendedPlotFrame.setTitle">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.extendedplotframe.ExtendedPlotFrame.setTitle">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">setTitle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wt</span><span class="p">,</span> <span class="n">gt</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set graph labels.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;set graph labels</span>
 
 <span class="sd">        wt -- window title</span>
 <span class="sd">        gt -- graph title</span>
@@ -445,7 +448,7 @@
 <div class="viewcode-block" id="ExtendedPlotFrame.setXLabel">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.extendedplotframe.ExtendedPlotFrame.setXLabel">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">setXLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set label for x axis.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;set label for x axis</span>
 
 <span class="sd">        x -- x label</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -455,7 +458,7 @@
 <div class="viewcode-block" id="ExtendedPlotFrame.setYLabel">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.extendedplotframe.ExtendedPlotFrame.setYLabel">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">setYLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set label for y axis.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;set label for y axis</span>
 
 <span class="sd">        y -- y label</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -465,7 +468,7 @@
 <div class="viewcode-block" id="ExtendedPlotFrame.clear">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.extendedplotframe.ExtendedPlotFrame.clear">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Erase all curves.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;erase all curves&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">subplot</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">curverefs</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">replot</span><span class="p">()</span></div>
@@ -481,8 +484,8 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">legendBoxProperties</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Legend properties dictionary with keys consistent with MPL version.</span>
 
-<span class="sd">    The argument names have changed in matplotlib 0.98.5. Old arguments</span>
-<span class="sd">    do not work with later versions of matplotlib.</span>
+<span class="sd">    The argument names have changed in matplotlib 0.98.5.</span>
+<span class="sd">    Old arguments do not work with later versions of matplotlib.</span>
 
 <span class="sd">    Return dictionary of legend properties.</span>
 <span class="sd">    &quot;&quot;&quot;</span>

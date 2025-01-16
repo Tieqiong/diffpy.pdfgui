@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>diffpy.pdfgui.gui.debugoptions &mdash; diffpy.pdfgui 3.1.0rc6 documentation</title>
+  <title>diffpy.pdfgui.gui.debugoptions &mdash; diffpy.pdfgui 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=e3a9b952"></script>
+      <script src="../../../../_static/documentation_options.js?v=f539c95a"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -88,19 +88,19 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
-<span class="sd">&quot;&quot;&quot;DebugOptions class for storing guess three time what.</span>
 
-<span class="sd">There should be exactly one instance of DebugOptions in pdfguiglobals</span>
-<span class="sd">module.</span>
+<span class="sd">&quot;&quot;&quot;DebugOptions class for storing guess three time what</span>
+
+<span class="sd">There should be exactly one instance of DebugOptions in pdfguiglobals module.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 
 <div class="viewcode-block" id="DebugOptions">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.debugoptions.DebugOptions">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">DebugOptions</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;DebugOptions is a place to store various debugging options. There should</span>
-<span class="sd">    be just one instance defined in pdfguiglobals module. It would be nice to</span>
-<span class="sd">    have a simple way of setting them on command line.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;DebugOptions is a place to store various debugging options.</span>
+<span class="sd">    There should be just one instance defined in pdfguiglobals module.</span>
+<span class="sd">    It would be nice to have a simple way of setting them on command line</span>
 
 <span class="sd">    Options in short and long forms:</span>
 <span class="sd">        noed, noerrordialog  -- [False], disable exceptions catching and</span>
@@ -137,8 +137,8 @@
         <span class="k">return</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Resolve values of short options. This is called only when normal</span>
-<span class="sd">        lookup fails.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Resolve values of short options.</span>
+<span class="sd">        This is called only when normal lookup fails.</span>
 
 <span class="sd">        returns value of short debug option</span>
 <span class="sd">        &quot;&quot;&quot;</span>

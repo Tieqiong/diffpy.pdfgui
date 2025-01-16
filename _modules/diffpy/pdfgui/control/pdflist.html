@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>diffpy.pdfgui.control.pdflist &mdash; diffpy.pdfgui 3.1.0rc6 documentation</title>
+  <title>diffpy.pdfgui.control.pdflist &mdash; diffpy.pdfgui 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=e3a9b952"></script>
+      <script src="../../../../_static/documentation_options.js?v=f539c95a"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -95,11 +95,12 @@
 <div class="viewcode-block" id="PDFList">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdflist.PDFList">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">PDFList</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;List class of PDFComponent, which can be accessed through index or a</span>
-<span class="sd">    name string.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;list class of PDFComponent, which can be accessed through index or a</span>
+<span class="sd">    name string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize</span>
 
 <span class="sd">        args -- argument list</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -107,7 +108,7 @@
         <span class="k">return</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idnm</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the item by idnm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the item by idnm</span>
 
 <span class="sd">        idnm -- The index or name of the item</span>
 <span class="sd">        return: The requested object</span>
@@ -122,7 +123,7 @@
                 <span class="k">raise</span> <span class="n">ControlKeyError</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; does not exist&quot;</span> <span class="o">%</span> <span class="n">idnm</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idnm</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the item by idnm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the item by idnm</span>
 
 <span class="sd">        idnm -- The index or name of the item</span>
 <span class="sd">        obj  -- The object to be inserted</span>
@@ -154,7 +155,7 @@
 <div class="viewcode-block" id="PDFList.rename">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdflist.PDFList.rename">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">rename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idnmrf</span><span class="p">,</span> <span class="n">newname</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Rename an item.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Rename an item</span>
 
 <span class="sd">        idnmrf -- index,name or reference to the object</span>
 <span class="sd">        newname -- new name</span>
@@ -183,7 +184,7 @@
 <div class="viewcode-block" id="PDFList.values">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdflist.PDFList.values">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get all held objects.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get all held objects</span>
 
 <span class="sd">        return: list of objects</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -193,7 +194,7 @@
 <div class="viewcode-block" id="PDFList.items">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdflist.PDFList.items">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get name-object pairs.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get name-object pairs</span>
 
 <span class="sd">        return: a list of tuple ( name, object)</span>
 <span class="sd">        &quot;&quot;&quot;</span>

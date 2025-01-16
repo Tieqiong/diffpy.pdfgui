@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>diffpy.pdfgui.gui.pdfpanel &mdash; diffpy.pdfgui 3.1.0rc6 documentation</title>
+  <title>diffpy.pdfgui.gui.pdfpanel &mdash; diffpy.pdfgui 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=e3a9b952"></script>
+      <script src="../../../../_static/documentation_options.js?v=f539c95a"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -99,9 +99,9 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">PDFPanel</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Mix-in class for all PDF gui panels.</span>
 
-<span class="sd">    This method is meant to be a secondary parent class for classed</span>
-<span class="sd">    derived from wx.Panel. It defines methods and member variables</span>
-<span class="sd">    necessary to all panels in the PDFgui.</span>
+<span class="sd">    This method is meant to be a secondary parent class for classed derived from</span>
+<span class="sd">    wx.Panel. It defines methods and member variables necessary to all panels in</span>
+<span class="sd">    the PDFgui.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
@@ -130,10 +130,9 @@
 <div class="viewcode-block" id="PDFPanel.setToolTips">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.pdfpanel.PDFPanel.setToolTips">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">setToolTips</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">toolTips</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets tooltips for controls.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets tooltips for controls</span>
 
-<span class="sd">        @param toolTips: dictionary of the form {&#39;controlname&#39; :</span>
-<span class="sd">        &#39;tooltip&#39;}</span>
+<span class="sd">        @param toolTips: dictionary of the form {&#39;controlname&#39; : &#39;tooltip&#39;}</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">controlName</span><span class="p">,</span> <span class="n">tooltip</span> <span class="ow">in</span> <span class="n">toolTips</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">control</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">controlName</span><span class="p">)</span>

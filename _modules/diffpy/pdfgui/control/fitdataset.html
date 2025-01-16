@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>diffpy.pdfgui.control.fitdataset &mdash; diffpy.pdfgui 3.1.0rc6 documentation</title>
+  <title>diffpy.pdfgui.control.fitdataset &mdash; diffpy.pdfgui 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=e3a9b952"></script>
+      <script src="../../../../_static/documentation_options.js?v=f539c95a"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -88,8 +88,9 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
-<span class="sd">&quot;&quot;&quot;Class FitDataSet for experimental PDF data and related fitting</span>
-<span class="sd">parameters.&quot;&quot;&quot;</span>
+
+<span class="sd">&quot;&quot;&quot;class FitDataSet for experimental PDF data and related fitting parameters</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
 
@@ -169,7 +170,6 @@
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Obtain refinable variables from self.initial.</span>
-
 <span class="sd">        This is called only when normal attribute lookup fails.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">PDFDataSet</span><span class="o">.</span><span class="n">refinableVars</span><span class="p">:</span>
@@ -180,7 +180,7 @@
         <span class="k">return</span> <span class="n">value</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getStrId</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Make a string identifier.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;make a string identifier</span>
 
 <span class="sd">        return value: string id</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -189,7 +189,7 @@
 <div class="viewcode-block" id="FitDataSet.getYNames">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitdataset.FitDataSet.getYNames">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getYNames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get names of data item which can be plotted as y.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;get names of data item which can be plotted as y</span>
 
 <span class="sd">        returns list of strings</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -200,7 +200,7 @@
 <div class="viewcode-block" id="FitDataSet.getXNames">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitdataset.FitDataSet.getXNames">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getXNames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get names of data item which can be plotted as x.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;get names of data item which can be plotted as x</span>
 
 <span class="sd">        returns list of strings</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -212,7 +212,7 @@
 <div class="viewcode-block" id="FitDataSet.getData">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitdataset.FitDataSet.getData">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">step</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get self&#39;s data member.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;get self&#39;s data member</span>
 
 <span class="sd">        name -- data item name</span>
 <span class="sd">        step -- step info, it can be:</span>
@@ -302,8 +302,8 @@
 
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_updateRcalcRange</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Helper method for updating fitrmin, fitrmax and fitrstep just after</span>
-<span class="sd">        reading observed values.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Helper method for updating fitrmin, fitrmax and fitrstep</span>
+<span class="sd">        just after reading observed values.</span>
 
 <span class="sd">        No return value.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -338,7 +338,7 @@
 <div class="viewcode-block" id="FitDataSet.readObsStr">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitdataset.FitDataSet.readObsStr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">readObsStr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datastring</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read experimental PDF data from a string.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read experimental PDF data from a string</span>
 
 <span class="sd">        datastring -- string of raw data</span>
 
@@ -470,7 +470,6 @@
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_resampledPDFDataSet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return instance of PDFDataSet with resampled observed data.</span>
-
 <span class="sd">        Helper method for writeResampledObs and writeResampledObsStr.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">resampled</span> <span class="o">=</span> <span class="n">PDFDataSet</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
@@ -510,9 +509,9 @@
 <div class="viewcode-block" id="FitDataSet.findParameters">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitdataset.FitDataSet.findParameters">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">findParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Obtain dictionary of parameters used by self.constraints. The keys</span>
-<span class="sd">        of returned dictionary are integer parameter indices, and their values</span>
-<span class="sd">        Parameter instances, with guessed initial values.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Obtain dictionary of parameters used by self.constraints.</span>
+<span class="sd">        The keys of returned dictionary are integer parameter indices, and</span>
+<span class="sd">        their values Parameter instances, with guessed initial values.</span>
 
 <span class="sd">        returns dictionary of indices and Parameter instances</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -534,7 +533,7 @@
 <div class="viewcode-block" id="FitDataSet.applyParameters">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitdataset.FitDataSet.applyParameters">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">applyParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate constraint formulas and adjust self.initial.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate constraint formulas and adjust self.initial</span>
 
 <span class="sd">        parameters -- dictionary of parameter indices with Parameter instances.</span>
 <span class="sd">                      Dictionary may also have float-type values.</span>
@@ -558,8 +557,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">changeParameterIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">oldidx</span><span class="p">,</span> <span class="n">newidx</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Change a parameter index to a new value.</span>
 
-<span class="sd">        This will replace all instances of one parameter name with</span>
-<span class="sd">        another in this fit.</span>
+<span class="sd">        This will replace all instances of one parameter name with another in</span>
+<span class="sd">        this fit.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
 
@@ -574,7 +573,7 @@
 <div class="viewcode-block" id="FitDataSet.copy">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitdataset.FitDataSet.copy">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Copy self to other. if other is None, create new instance.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Copy self to other. if other is None, create new instance</span>
 
 <span class="sd">        other -- ref to other object</span>
 
@@ -678,12 +677,11 @@
 <div class="viewcode-block" id="FitDataSet.getFitSamplingType">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitdataset.FitDataSet.getFitSamplingType">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getFitSamplingType</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Description of r-sampling used in the fit.  This method compares</span>
-<span class="sd">        self.fitrstep with r-sampling in the observed data and with Nyquist r</span>
-<span class="sd">        step.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Description of r-sampling used in the fit.  This method</span>
+<span class="sd">        compares self.fitrstep with r-sampling in the observed data</span>
+<span class="sd">        and with Nyquist r step.</span>
 
-<span class="sd">        Return a string, possible values are &quot;data&quot;, &quot;Nyquist&quot; or</span>
-<span class="sd">        &quot;custom&quot;.</span>
+<span class="sd">        Return a string, possible values are &quot;data&quot;, &quot;Nyquist&quot; or &quot;custom&quot;.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">eps</span> <span class="o">=</span> <span class="mf">1e-8</span>
         <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fitrstep</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObsSampling</span><span class="p">())</span> <span class="o">&lt;</span> <span class="n">eps</span><span class="p">:</span>
@@ -738,7 +736,6 @@
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitdataset.FitDataSet.getNyquistSampling">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getNyquistSampling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return r-step corresponding to Nyquist sampling at the qmax value.</span>
-
 <span class="sd">        When qmax is zero, return r-step in the observed data.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">qmax</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">:</span>

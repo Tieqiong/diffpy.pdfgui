@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>diffpy.pdfgui.control.pdfstructure &mdash; diffpy.pdfgui 3.1.0rc6 documentation</title>
+  <title>diffpy.pdfgui.control.pdfstructure &mdash; diffpy.pdfgui 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=e3a9b952"></script>
+      <script src="../../../../_static/documentation_options.js?v=f539c95a"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -116,8 +116,8 @@
 <div class="viewcode-block" id="PDFStructure.read">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdfstructure.PDFStructure.read">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load structure from a file, raise ControlFileError for invalid or</span>
-<span class="sd">        unknown structure format.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load structure from a file, raise ControlFileError for invalid</span>
+<span class="sd">        or unknown structure format.</span>
 
 <span class="sd">        filename -- file to be loaded</span>
 <span class="sd">        format   -- structure format such as &#39;pdffit&#39;, &#39;pdb&#39;, &#39;xyz&#39;.  When</span>
@@ -141,7 +141,7 @@
 <div class="viewcode-block" id="PDFStructure.copy">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdfstructure.PDFStructure.copy">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Copy self to other. if other is None, create an instance.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;copy self to other. if other is None, create an instance</span>
 
 <span class="sd">        other -- ref to other object</span>
 
@@ -162,8 +162,9 @@
 <div class="viewcode-block" id="PDFStructure.setvar">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdfstructure.PDFStructure.setvar">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">setvar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Assign to data member using PdfFit-style variable This can be used</span>
-<span class="sd">        when applying constraint equations with particular parameter values.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;assign to data member using PdfFit-style variable</span>
+<span class="sd">        This can be used when applying constraint equations with particular</span>
+<span class="sd">        parameter values.</span>
 
 <span class="sd">        var   -- string representation of PdfFit variable.  Possible values:</span>
 <span class="sd">                 pscale, spdiameter, stepcut, delta1, delta2, sratio, rcut,</span>
@@ -217,8 +218,9 @@
 <div class="viewcode-block" id="PDFStructure.getvar">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdfstructure.PDFStructure.getvar">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getvar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Obtain value corresponding to PdfFit phase variable var This can be</span>
-<span class="sd">        used when guessing Parameter values from constraints dictionary.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;obtain value corresponding to PdfFit phase variable var</span>
+<span class="sd">        This can be used when guessing Parameter values from constraints</span>
+<span class="sd">        dictionary.</span>
 
 <span class="sd">        var   -- string representation of PdfFit variable.  Possible values:</span>
 <span class="sd">                 pscale, spdiameter, stepcut, delta1, delta2, sratio, rcut,</span>

@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>diffpy.pdfgui.control.pdfdataset &mdash; diffpy.pdfgui 3.1.0rc6 documentation</title>
+  <title>diffpy.pdfgui.control.pdfdataset &mdash; diffpy.pdfgui 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=e3a9b952"></script>
+      <script src="../../../../_static/documentation_options.js?v=f539c95a"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -88,7 +88,9 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
-<span class="sd">&quot;&quot;&quot;Class PDFDataSet for experimental PDF data.&quot;&quot;&quot;</span>
+
+<span class="sd">&quot;&quot;&quot;class PDFDataSet for experimental PDF data.</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os.path</span>
@@ -160,7 +162,7 @@
 <div class="viewcode-block" id="PDFDataSet.clear">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdfdataset.PDFDataSet.clear">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset all data members to initial empty values.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;reset all data members to initial empty values&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">robs</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Gobs</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">drobs</span> <span class="o">=</span> <span class="p">[]</span>
@@ -182,8 +184,8 @@
 <div class="viewcode-block" id="PDFDataSet.setvar">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdfdataset.PDFDataSet.setvar">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">setvar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Assign data member using PdfFit-style variable. Used by</span>
-<span class="sd">        applyParameters().</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Assign data member using PdfFit-style variable.</span>
+<span class="sd">        Used by applyParameters().</span>
 
 <span class="sd">        var   -- string representation of dataset PdfFit variable.</span>
 <span class="sd">                 Possible values: qdamp, qbroad, dscale</span>
@@ -202,8 +204,8 @@
 <div class="viewcode-block" id="PDFDataSet.getvar">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdfdataset.PDFDataSet.getvar">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getvar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Obtain value corresponding to PdfFit dataset variable. Used by</span>
-<span class="sd">        findParameters().</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Obtain value corresponding to PdfFit dataset variable.</span>
+<span class="sd">        Used by findParameters().</span>
 
 <span class="sd">        var   -- string representation of dataset PdfFit variable.</span>
 <span class="sd">                 Possible values: qdamp, qbroad, dscale</span>
@@ -222,7 +224,7 @@
 <div class="viewcode-block" id="PDFDataSet.read">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdfdataset.PDFDataSet.read">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load data from PDFGetX2 or PDFGetN gr file.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;load data from PDFGetX2 or PDFGetN gr file</span>
 
 <span class="sd">        filename -- file to read from</span>
 
@@ -245,7 +247,7 @@
 <div class="viewcode-block" id="PDFDataSet.readStr">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdfdataset.PDFDataSet.readStr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">readStr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datastring</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read experimental PDF data from a string.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;read experimental PDF data from a string</span>
 
 <span class="sd">        datastring -- string of raw data</span>
 
@@ -435,7 +437,7 @@
 <div class="viewcode-block" id="PDFDataSet.copy">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.pdfdataset.PDFDataSet.copy">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Copy self to other. if other is None, create new instance.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;copy self to other. if other is None, create new instance</span>
 
 <span class="sd">        other -- ref to other object</span>
 <span class="sd">        returns reference to copied object</span>

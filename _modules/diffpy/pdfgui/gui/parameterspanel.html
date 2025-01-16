@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>diffpy.pdfgui.gui.parameterspanel &mdash; diffpy.pdfgui 3.1.0rc6 documentation</title>
+  <title>diffpy.pdfgui.gui.parameterspanel &mdash; diffpy.pdfgui 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=e3a9b952"></script>
+      <script src="../../../../_static/documentation_options.js?v=f539c95a"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -108,7 +108,7 @@
 <div class="viewcode-block" id="ParametersPanel">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.parameterspanel.ParametersPanel">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ParametersPanel</span><span class="p">(</span><span class="n">wx</span><span class="o">.</span><span class="n">Panel</span><span class="p">,</span> <span class="n">PDFPanel</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;GUI Panel, parameters viewer/editor.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;GUI Panel, parameters viewer/editor</span>
 
 <span class="sd">    Data members:</span>
 <span class="sd">        parameters      -- parameters dictionary</span>
@@ -190,7 +190,7 @@
 <div class="viewcode-block" id="ParametersPanel.refresh">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.parameterspanel.ParametersPanel.refresh">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">refresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Refreshes wigets on the panel.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Refreshes wigets on the panel&quot;&quot;&quot;</span>
         <span class="c1">#        # Update the parameters dictionary</span>
         <span class="c1">#        self.fitting.updateParameters()</span>
 
@@ -253,8 +253,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">onGridRangeSelect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>  <span class="c1"># wxGlade: ParametersPanel.&lt;event_handler&gt;</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Handle range selections.</span>
 
-<span class="sd">        This is needed to properly handle simple left-clicking of</span>
-<span class="sd">        fix/free cells. It serves no other purpose.</span>
+<span class="sd">        This is needed to properly handle simple left-clicking of fix/free</span>
+<span class="sd">        cells. It serves no other purpose.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">event</span><span class="o">.</span><span class="n">Skip</span><span class="p">()</span>
         <span class="k">return</span></div>
@@ -343,6 +343,7 @@
 <span class="sd">        row     --  row</span>
 <span class="sd">        col     --  column</span>
 <span class="sd">        value   --  new value</span>
+
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">key</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">grid_parameters</span><span class="o">.</span><span class="n">GetRowLabelValue</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">col</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># initial value</span>
@@ -366,7 +367,7 @@
 <div class="viewcode-block" id="ParametersPanel.popupMenu">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.parameterspanel.ParametersPanel.popupMenu">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">popupMenu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Opens a popup menu.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Opens a popup menu</span>
 
 <span class="sd">        window  --  window, where to popup a menu</span>
 <span class="sd">        x       --  x coordinate</span>
@@ -402,7 +403,7 @@
 <div class="viewcode-block" id="ParametersPanel.onPopupFill">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.parameterspanel.ParametersPanel.onPopupFill">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">onPopupFill</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fills cells selected in the grid with a new value.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fills cells selected in the grid with a new value&quot;&quot;&quot;</span>
 
         <span class="c1"># NOTE: GetSelectedCells returns only SINGLE selected cells, not blocks or row/columns !</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid_parameters</span><span class="o">.</span><span class="n">IsSelection</span><span class="p">():</span>
@@ -430,7 +431,7 @@
 <div class="viewcode-block" id="ParametersPanel.onPopupFixFree">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.parameterspanel.ParametersPanel.onPopupFixFree">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">onPopupFixFree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fixes parameters with selected cells.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fixes parameters with selected cells&quot;&quot;&quot;</span>
         <span class="c1"># NOTE: GetSelectedCells returns only SINGLE selected cells, not blocks</span>
         <span class="c1"># or row/columns !</span>
         <span class="n">seldict</span> <span class="o">=</span> <span class="p">{}</span>
@@ -581,7 +582,7 @@
             <span class="k">pass</span>
 
         <span class="k">def</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">            </span><span class="sd">&quot;&quot;&quot;Testing code goes here.&quot;&quot;&quot;</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Testing code goes here&quot;&quot;&quot;</span>
             <span class="kn">from</span><span class="w"> </span><span class="nn">diffpy.pdfgui.control.parameter</span><span class="w"> </span><span class="kn">import</span> <span class="n">Parameter</span>
 
             <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>

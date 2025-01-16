@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>diffpy.pdfgui.gui.wxextensions.listctrls &mdash; diffpy.pdfgui 3.1.0rc6 documentation</title>
+  <title>diffpy.pdfgui.gui.wxextensions.listctrls &mdash; diffpy.pdfgui 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../../_static/documentation_options.js?v=e3a9b952"></script>
+      <script src="../../../../../_static/documentation_options.js?v=f539c95a"></script>
       <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../../_static/js/theme.js"></script>
@@ -88,6 +88,7 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
+
 <span class="sd">&quot;&quot;&quot;This module contains custom wxListCtrl subclasses.</span>
 <span class="sd">AutoWidthListCtrl  - A wxListCtrl object that automatically adjusts the width of</span>
 <span class="sd">its columns.</span>
@@ -107,7 +108,7 @@
 <div class="viewcode-block" id="AutoWidthListCtrl">
 <a class="viewcode-back" href="../../../../../api/diffpy.pdfgui.gui.wxextensions.html#diffpy.pdfgui.gui.wxextensions.listctrls.AutoWidthListCtrl">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AutoWidthListCtrl</span><span class="p">(</span><span class="n">wx12</span><span class="o">.</span><span class="n">ListCtrl</span><span class="p">,</span> <span class="n">listmix</span><span class="o">.</span><span class="n">ListCtrlAutoWidthMixin</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;WxListCtrl subclass that automatically adjusts its column width.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;wxListCtrl subclass that automatically adjusts its column width.&quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">wx</span><span class="o">.</span><span class="n">DefaultPosition</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">wx</span><span class="o">.</span><span class="n">DefaultSize</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">wx12</span><span class="o">.</span><span class="n">ListCtrl</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">style</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -153,14 +154,13 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;AutoWidthListCtrl subclass that sorts its columns when the column header</span>
 <span class="sd">    is pressed.</span>
 
-<span class="sd">    This ListCtrl requires an itemDataMap member dictionary to be</span>
-<span class="sd">    initialized before the sorting capabilities can be realized. This</span>
-<span class="sd">    dictionary simply references the ListCtrl&#39;s entries by a unique</span>
-<span class="sd">    number. This number must be stored as the ItemData (with</span>
-<span class="sd">    SetItemData) of the entry.  The member data must be in the form of a</span>
-<span class="sd">    tuple, where the tuple has a number of entries as the ListCtrl has</span>
-<span class="sd">    columns. The sorting routine sorts the items in the ListCtrl by the</span>
-<span class="sd">    entries in this tuple.</span>
+<span class="sd">    This ListCtrl requires an itemDataMap member dictionary to be initialized</span>
+<span class="sd">    before the sorting capabilities can be realized. This dictionary simply references</span>
+<span class="sd">    the ListCtrl&#39;s entries by a unique number. This number must be stored as the</span>
+<span class="sd">    ItemData (with SetItemData) of the entry.  The member data must be in the</span>
+<span class="sd">    form of a tuple, where the tuple has a number of entries as the ListCtrl has</span>
+<span class="sd">    columns. The sorting routine sorts the items in the ListCtrl by the entries</span>
+<span class="sd">    in this tuple.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">wx</span><span class="o">.</span><span class="n">DefaultPosition</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">wx</span><span class="o">.</span><span class="n">DefaultSize</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -191,11 +191,10 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">makeIDM</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;This method automatically sets up the itemDataMap.</span>
 
-<span class="sd">        The itemDataMap gets filled with the current ListCtrl entries.</span>
-<span class="sd">        The itemDataMap does not update automatically when the list is</span>
-<span class="sd">        changed. To update the itemDataMap this method must be called</span>
-<span class="sd">        again. initializeSorter should be called after a call to this</span>
-<span class="sd">        method.</span>
+<span class="sd">        The itemDataMap gets filled with the current ListCtrl entries. The</span>
+<span class="sd">        itemDataMap does not update automatically when the list is changed. To</span>
+<span class="sd">        update the itemDataMap this method must be called again.</span>
+<span class="sd">        initializeSorter should be called after a call to this method.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">numcol</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetColumnCount</span><span class="p">()</span>
         <span class="n">numrow</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetItemCount</span><span class="p">()</span>

@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>diffpy.pdfgui.control.organizer &mdash; diffpy.pdfgui 3.1.0rc6 documentation</title>
+  <title>diffpy.pdfgui.control.organizer &mdash; diffpy.pdfgui 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=e3a9b952"></script>
+      <script src="../../../../_static/documentation_options.js?v=f539c95a"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -114,8 +114,8 @@
 <div class="viewcode-block" id="Organizer">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Organizer</span><span class="p">(</span><span class="n">PDFComponent</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Base class for Fitting. It holds separate lists of datasets, strucs and</span>
-<span class="sd">    calculations.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Base class for Fitting. It holds separate lists of datasets,</span>
+<span class="sd">    strucs and calculations</span>
 
 <span class="sd">    datasets:     dataset list</span>
 <span class="sd">    strucs:       structure list</span>
@@ -123,7 +123,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;initialize.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;initialize</span>
 
 <span class="sd">        name -- component name</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -158,7 +158,7 @@
 <div class="viewcode-block" id="Organizer.add">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer.add">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add structure/dataset/calculation.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;add structure/dataset/calculation</span>
 
 <span class="sd">        id       -- reference to structure/dataset/calculation</span>
 <span class="sd">        position -- position to insert, by default the last one</span>
@@ -175,7 +175,7 @@
 <div class="viewcode-block" id="Organizer.remove">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer.remove">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove structure/dataset/calculation.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;remove structure/dataset/calculation</span>
 
 <span class="sd">        id -- reference to structure/dataset/calculation</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -187,7 +187,7 @@
 <div class="viewcode-block" id="Organizer.rename">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer.rename">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">rename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">newname</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Rename structure/dataset/calculation.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;rename structure/dataset/calculation</span>
 
 <span class="sd">        id -- reference to structure/dataset/calculation</span>
 <span class="sd">        newname -- new name to be given</span>
@@ -199,7 +199,7 @@
 <div class="viewcode-block" id="Organizer.index">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer.index">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Find the position of item in the list.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;find the position of item in the list</span>
 
 <span class="sd">        id -- id of object</span>
 <span class="sd">        return : object position</span>
@@ -218,7 +218,7 @@
 <div class="viewcode-block" id="Organizer.getStructure">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer.getStructure">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getStructure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get structure by position.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;get structure by position</span>
 
 <span class="sd">        pos -- the position of structure in the list</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -237,7 +237,7 @@
 <div class="viewcode-block" id="Organizer.getDataSet">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer.getDataSet">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getDataSet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get dataset by position.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;get dataset by position</span>
 
 <span class="sd">        pos -- the position of dataset in the list</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -256,7 +256,7 @@
 <div class="viewcode-block" id="Organizer.getCalculation">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer.getCalculation">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getCalculation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get calculation by position.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;get calculation by position</span>
 
 <span class="sd">        pos -- the position of calculation in the list</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -268,7 +268,7 @@
 <div class="viewcode-block" id="Organizer.load">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer.load">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">subpath</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load data from a zipped project file.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;load data from a zipped project file</span>
 
 <span class="sd">        z -- zipped project file</span>
 <span class="sd">        subpath -- path to its own storage within project file</span>
@@ -306,7 +306,7 @@
 <div class="viewcode-block" id="Organizer.save">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer.save">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">subpath</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Save data from a zipped project file.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;save data from a zipped project file</span>
 
 <span class="sd">        z -- zipped project file</span>
 <span class="sd">        subpath -- path to its own storage within project file</span>
@@ -326,7 +326,7 @@
 <div class="viewcode-block" id="Organizer.copy">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer.copy">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Copy self to other. if other is None, create an instance.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;copy self to other. if other is None, create an instance</span>
 
 <span class="sd">        other -- ref to other object</span>
 <span class="sd">        returns reference to copied object</span>
@@ -346,7 +346,7 @@
 <div class="viewcode-block" id="Organizer.organization">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.organizer.Organizer.organization">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">organization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get internal organization.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;get internal organization</span>
 
 <span class="sd">        returns a tree of internal hierarchy</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -369,8 +369,8 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Copy spdiameter value loaded from fit or calculation to phase.</span>
 
 <span class="sd">        This method takes care of loading old PDFgui projects where</span>
-<span class="sd">        spdiameter belonged to FitDataSet or Calculation classes. It</span>
-<span class="sd">        should be called only from the Organizer.load method.</span>
+<span class="sd">        spdiameter belonged to FitDataSet or Calculation classes.</span>
+<span class="sd">        It should be called only from the Organizer.load method.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># Jump out if any of structures has spdiameter set</span>
         <span class="k">for</span> <span class="n">stru</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">strucs</span><span class="p">:</span>
