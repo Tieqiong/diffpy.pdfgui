@@ -88,7 +88,6 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
-
 <span class="sd">&quot;&quot;&quot;This module contains the FitTree object designed for use in PDFgui.</span>
 
 <span class="sd">Classes:</span>
@@ -138,7 +137,6 @@
 <span class="sd">    control     --  The pdfguicontrol object that interfaces between the tree</span>
 <span class="sd">                    and the pdffit2 engine. The tree is a mirror of the internal</span>
 <span class="sd">                    structure of the control.</span>
-
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
@@ -255,7 +253,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">GetPhases</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a list of phase in branch.</span>
 
-<span class="sd">        node is either the fit-root or a node in the fit-branch of interest.</span>
+<span class="sd">        node is either the fit-root or a node in the fit-branch of</span>
+<span class="sd">        interest.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">nodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetChildren</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GetFitRoot</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
         <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="nb">id</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">nodes</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetNodeType</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;phase&quot;</span><span class="p">]</span>
@@ -267,7 +266,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">GetDataSets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a list of datasets in branch.</span>
 
-<span class="sd">        node is either the fit-root or a node in the fit-branch of interest.</span>
+<span class="sd">        node is either the fit-root or a node in the fit-branch of</span>
+<span class="sd">        interest.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">nodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetChildren</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GetFitRoot</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
         <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="nb">id</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">nodes</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetNodeType</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;dataset&quot;</span><span class="p">]</span>
@@ -279,7 +279,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">GetCalculations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a list of calculations in branch.</span>
 
-<span class="sd">        node is either the fit-root or a node in the fit-branch of interest.</span>
+<span class="sd">        node is either the fit-root or a node in the fit-branch of</span>
+<span class="sd">        interest.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">nodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetChildren</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GetFitRoot</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
         <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="nb">id</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">nodes</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetNodeType</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;calculation&quot;</span><span class="p">]</span>
@@ -328,9 +329,9 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">GetLastPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the last phase child of the parent node.</span>
 
-<span class="sd">        This method is helpful in placing datasets and phases into the fit tree.</span>
-<span class="sd">        This method depends on the fact that phases are placed before datasets</span>
-<span class="sd">        in the fit tree.</span>
+<span class="sd">        This method is helpful in placing datasets and phases into the</span>
+<span class="sd">        fit tree. This method depends on the fact that phases are placed</span>
+<span class="sd">        before datasets in the fit tree.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">siblings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetChildren</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
         <span class="n">lastphase</span> <span class="o">=</span> <span class="kc">None</span>
@@ -349,9 +350,9 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">GetLastDataSet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the last dataset child of the fit node.</span>
 
-<span class="sd">        If there is no last dataset node, this may return the last phase node.</span>
-<span class="sd">        The purpose of getting this node is to know where to place another node,</span>
-<span class="sd">        so the actual node type is not important.</span>
+<span class="sd">        If there is no last dataset node, this may return the last phase</span>
+<span class="sd">        node. The purpose of getting this node is to know where to place</span>
+<span class="sd">        another node, so the actual node type is not important.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">siblings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetChildren</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
         <span class="n">lastdata</span> <span class="o">=</span> <span class="kc">None</span>
@@ -394,10 +395,10 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">GetPositionInSubtree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the index if the node in its subtree.</span>
 
-<span class="sd">        For fits the position is absolute within the tree. For phases, datasets,</span>
-<span class="sd">        and calculations, the location is taken to be in reference to the other</span>
-<span class="sd">        nodes of its type. This is designed to be compatible with the control</span>
-<span class="sd">        center.</span>
+<span class="sd">        For fits the position is absolute within the tree. For phases,</span>
+<span class="sd">        datasets, and calculations, the location is taken to be in</span>
+<span class="sd">        reference to the other nodes of its type. This is designed to be</span>
+<span class="sd">        compatible with the control center.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetItemParent</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
         <span class="n">brood</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetChildren</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
@@ -420,10 +421,10 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">SetControlData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the control center data associated with the node.</span>
 
-<span class="sd">        This need only be called for &#39;fit&#39; nodes.</span>
-<span class="sd">        This is the &quot;cdata&quot; entry in the data dictionary of the</span>
-<span class="sd">        node. It holds the object with which the right panel interfaces. For</span>
-<span class="sd">        example, for a &#39;phase&#39; node, it contains a Structure object.</span>
+<span class="sd">        This need only be called for &#39;fit&#39; nodes. This is the &quot;cdata&quot;</span>
+<span class="sd">        entry in the data dictionary of the node. It holds the object</span>
+<span class="sd">        with which the right panel interfaces. For example, for a</span>
+<span class="sd">        &#39;phase&#39; node, it contains a Structure object.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">nodetype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetNodeType</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">nodetype</span> <span class="o">!=</span> <span class="s2">&quot;fit&quot;</span><span class="p">:</span>
@@ -711,8 +712,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">CopyBranch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">startnode</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Make a copy of a tree branch.</span>
 
-<span class="sd">        The branch is held in the system clipboard so it can be used in another</span>
-<span class="sd">        instance of the fittree.</span>
+<span class="sd">        The branch is held in the system clipboard so it can be used in</span>
+<span class="sd">        another instance of the fittree.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">nodetype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetNodeType</span><span class="p">(</span><span class="n">startnode</span><span class="p">)</span>
         <span class="n">cdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GetControlData</span><span class="p">(</span><span class="n">startnode</span><span class="p">))</span>
@@ -738,8 +739,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">GetClipboard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the clipboard data.</span>
 
-<span class="sd">        Returns the controldata in the clipboard, or None if the clipboard is</span>
-<span class="sd">        empty or contains the wrong type of data.</span>
+<span class="sd">        Returns the controldata in the clipboard, or None if the</span>
+<span class="sd">        clipboard is empty or contains the wrong type of data.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># Check to see if data is present</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">wx</span><span class="o">.</span><span class="n">TheClipboard</span><span class="o">.</span><span class="n">IsSupported</span><span class="p">(</span><span class="n">wx</span><span class="o">.</span><span class="n">DataFormat</span><span class="p">(</span><span class="n">wx</span><span class="o">.</span><span class="n">DF_TEXT</span><span class="p">)):</span>
@@ -1089,9 +1090,8 @@
 <div class="viewcode-block" id="incrementName">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.fittree.incrementName">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">incrementName</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">namelist</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Increment the name by assigning the lowest number to the end such</span>
-<span class="sd">    that the name does not appear in the namelist.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Increment the name by assigning the lowest number to the end such that</span>
+<span class="sd">    the name does not appear in the namelist.&quot;&quot;&quot;</span>
     <span class="n">newname</span> <span class="o">=</span> <span class="n">name</span>
     <span class="n">match</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;\d+$&quot;</span>
     <span class="n">counter</span> <span class="o">=</span> <span class="n">start</span>

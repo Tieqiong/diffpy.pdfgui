@@ -88,7 +88,6 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
-
 <span class="sd">&quot;&quot;&quot;Common methods used in the phase panels.&quot;&quot;&quot;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">wx</span>
@@ -105,7 +104,7 @@
 <div class="viewcode-block" id="float2str">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.phasepanelutils.float2str">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">float2str</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;compact string representation of float&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compact string representation of float.&quot;&quot;&quot;</span>
     <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%g</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">x</span>
     <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="s2">&quot;.0&quot;</span>
@@ -120,21 +119,11 @@
 
 <span class="sd">    This is used by phaseconfigurepanel and phaseresultspanel.</span>
 
-<span class="sd">    This method updates the following TextCtrls with with contents of the</span>
-<span class="sd">    structure member variable of the panel.</span>
-<span class="sd">    textCtrlA</span>
-<span class="sd">    textCtrlB</span>
-<span class="sd">    textCtrlC</span>
-<span class="sd">    textCtrlAlpha</span>
-<span class="sd">    textCtrlBeta</span>
-<span class="sd">    textCtrlGamma</span>
-<span class="sd">    textCtrlScaleFactor</span>
-<span class="sd">    textCtrlDelta1</span>
-<span class="sd">    textCtrlDelta2</span>
-<span class="sd">    textCtrlSratio</span>
-<span class="sd">    textCtrlRcut</span>
-<span class="sd">    textCtrlStepcut</span>
-<span class="sd">    textCtrlSpdiameter</span>
+<span class="sd">    This method updates the following TextCtrls with with contents of</span>
+<span class="sd">    the structure member variable of the panel. textCtrlA textCtrlB</span>
+<span class="sd">    textCtrlC textCtrlAlpha textCtrlBeta textCtrlGamma</span>
+<span class="sd">    textCtrlScaleFactor textCtrlDelta1 textCtrlDelta2 textCtrlSratio</span>
+<span class="sd">    textCtrlRcut textCtrlStepcut textCtrlSpdiameter</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">panel</span><span class="o">.</span><span class="n">structure</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="c1"># clear textcontrols</span>
@@ -180,7 +169,8 @@
 <span class="sd">    This is used by phaseconfigurepanel and phaseresultspanel.</span>
 
 <span class="sd">    This method fills the grid with the contents of the structure member</span>
-<span class="sd">    variable of the panel. It is expected that the grid is named &#39;gridAtoms&#39;.</span>
+<span class="sd">    variable of the panel. It is expected that the grid is named</span>
+<span class="sd">    &#39;gridAtoms&#39;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">panel</span><span class="o">.</span><span class="n">structure</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="c1"># remove all rows from grid</span>
@@ -275,10 +265,10 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">canCopySelectedCells</span><span class="p">(</span><span class="n">panel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check to see if we can copy selected cells.</span>
 
-<span class="sd">    To be copyable, the cells must exist in a single block or there must be a</span>
-<span class="sd">    single cell selected. Note that a block that is selected by individual cells</span>
-<span class="sd">    is considered a collection of individual atoms, not a block. This is default</span>
-<span class="sd">    wxPython behavior.</span>
+<span class="sd">    To be copyable, the cells must exist in a single block or there must</span>
+<span class="sd">    be a single cell selected. Note that a block that is selected by</span>
+<span class="sd">    individual cells is considered a collection of individual atoms, not</span>
+<span class="sd">    a block. This is default wxPython behavior.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">grid</span> <span class="o">=</span> <span class="n">panel</span><span class="o">.</span><span class="n">gridAtoms</span>
 
@@ -294,7 +284,8 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">canPasteIntoCells</span><span class="p">(</span><span class="n">panel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if clipboard contents are formatted for grid insertion.</span>
 
-<span class="sd">    This also checks to see if the cell selection is appropriate for pasting.</span>
+<span class="sd">    This also checks to see if the cell selection is appropriate for</span>
+<span class="sd">    pasting.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">grid</span> <span class="o">=</span> <span class="n">panel</span><span class="o">.</span><span class="n">gridAtoms</span>
 
@@ -350,9 +341,8 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">copySelectedCells</span><span class="p">(</span><span class="n">panel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Copy block of selected cells or individual cell into clipboard.</span>
 
-<span class="sd">    This stores the cells as a plain text grid so that it can be copied to and</span>
-<span class="sd">    from other applications.</span>
-<span class="sd">    Columns are delimited by tabs &#39;\t&#39;.</span>
+<span class="sd">    This stores the cells as a plain text grid so that it can be copied</span>
+<span class="sd">    to and from other applications. Columns are delimited by tabs &#39;\t&#39;.</span>
 <span class="sd">    Rows are delimited by newlines &#39;\n&#39;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">grid</span> <span class="o">=</span> <span class="n">panel</span><span class="o">.</span><span class="n">gridAtoms</span>
@@ -396,8 +386,8 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">pasteIntoCells</span><span class="p">(</span><span class="n">panel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Paste clipboard contents into cells.</span>
 
-<span class="sd">    canPasteIntoCells must be called before this method in order to format</span>
-<span class="sd">    clipboard text for pasting.</span>
+<span class="sd">    canPasteIntoCells must be called before this method in order to</span>
+<span class="sd">    format clipboard text for pasting.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Double check the clipcells</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">clipcells</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>

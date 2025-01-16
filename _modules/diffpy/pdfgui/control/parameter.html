@@ -88,10 +88,8 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
-
-<span class="sd">&quot;&quot;&quot;class Parameter for handling one refined parameter</span>
-<span class="sd">To be stored in Fitting.parameters { idx : parameter } dictionary</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;Class Parameter for handling one refined parameter To be stored in</span>
+<span class="sd">Fitting.parameters { idx : parameter } dictionary.&quot;&quot;&quot;</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">diffpy.pdfgui.control.controlerrors</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">ControlError</span><span class="p">,</span>
@@ -105,8 +103,8 @@
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.parameter.Parameter">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Parameter</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Parameter is class for value and properties of refined parameter.</span>
-<span class="sd">    Because the initial value of Parameter may come from another Fitting,</span>
-<span class="sd">    it is accessed by setInitial(), initialStr() and initialValue() methods.</span>
+<span class="sd">    Because the initial value of Parameter may come from another Fitting, it is</span>
+<span class="sd">    accessed by setInitial(), initialStr() and initialValue() methods.</span>
 
 <span class="sd">    Data members:</span>
 <span class="sd">        idx       -- integer identifier of this parameter in PdfFit</span>
@@ -122,7 +120,7 @@
     <span class="c1"># fits should reference PDFGuiControl.fits</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">initial</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize new parameter</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize new parameter.</span>
 
 <span class="sd">        idx     -- idx of this parameter in PdfFit</span>
 <span class="sd">        initial -- optional initial value of the parameter.</span>
@@ -140,7 +138,7 @@
 <div class="viewcode-block" id="Parameter.setInitial">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.parameter.Parameter.setInitial">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">setInitial</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;set initial value to float or refined value from another Fitting.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set initial value to float or refined value from another Fitting.</span>
 
 <span class="sd">        initial -- initial value, it can be something convertible to float,</span>
 <span class="sd">                   Fitting reference or string in &quot;=fitname&quot; or</span>
@@ -240,8 +238,8 @@
 
     <span class="k">def</span><span class="w"> </span><span class="nf">__findLinkedFitting</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Private search for linked Fitting by name and by representation.</span>
-<span class="sd">        Should be called only when initial value is linked to another</span>
-<span class="sd">        Fitting.  Updates self.__initial and self.__fitrepr.</span>
+<span class="sd">        Should be called only when initial value is linked to another Fitting.</span>
+<span class="sd">        Updates self.__initial and self.__fitrepr.</span>
 
 <span class="sd">        returns reference to Fitting when found or None</span>
 <span class="sd">        &quot;&quot;&quot;</span>

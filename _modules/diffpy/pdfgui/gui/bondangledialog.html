@@ -171,8 +171,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">setStructure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">structure</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the structure and update the widgets.</span>
 
-<span class="sd">        This must be called before the spin control boxes will be settable to</span>
-<span class="sd">        anything other than 1.</span>
+<span class="sd">        This must be called before the spin control boxes will be</span>
+<span class="sd">        settable to anything other than 1.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">natoms</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">structure</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">aSpinCtrl</span><span class="o">.</span><span class="n">SetRange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">natoms</span><span class="p">)</span>

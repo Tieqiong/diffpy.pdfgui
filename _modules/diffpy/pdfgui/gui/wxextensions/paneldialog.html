@@ -90,10 +90,8 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
-
 <span class="sd">&quot;&quot;&quot;This module contains the PanelDialog class, a simple class that turns any</span>
-<span class="sd">panel into a dialog.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">panel into a dialog.&quot;&quot;&quot;</span>
 
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">wx</span>
@@ -102,9 +100,11 @@
 <div class="viewcode-block" id="PanelDialog">
 <a class="viewcode-back" href="../../../../../api/diffpy.pdfgui.gui.wxextensions.html#diffpy.pdfgui.gui.wxextensions.paneldialog.PanelDialog">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">PanelDialog</span><span class="p">(</span><span class="n">wx</span><span class="o">.</span><span class="n">Dialog</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;This class will turn any panel into a dialog.  Using this makes for</span>
-<span class="sd">    quicker development and encourages the developer to design a gui as a</span>
-<span class="sd">    collection of panels, instead of a monolithic mega-panel.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This class will turn any panel into a dialog.</span>
+
+<span class="sd">    Using this makes for quicker development and encourages the</span>
+<span class="sd">    developer to design a gui as a collection of panels, instead of a</span>
+<span class="sd">    monolithic mega-panel.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
@@ -116,11 +116,10 @@
 <span class="sd">        Unless specified, style is automatically set as</span>
 <span class="sd">        wx.DEFAULT_DIALOG_STYLE|wx.RESIZE_BORDER</span>
 
-<span class="sd">        Creating a PanelDialog requires three steps.</span>
-<span class="sd">        1) Create the PanelDialog.</span>
-<span class="sd">        2) Create the Panel, with the new PanelDialog as the parent.</span>
-<span class="sd">        3) Call the setPanel method of the PanelDialog with the new Panel as the</span>
-<span class="sd">           the argument.</span>
+<span class="sd">        Creating a PanelDialog requires three steps. 1) Create the</span>
+<span class="sd">        PanelDialog. 2) Create the Panel, with the new PanelDialog as</span>
+<span class="sd">        the parent. 3) Call the setPanel method of the PanelDialog with</span>
+<span class="sd">        the new Panel as the    the argument.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">kwds</span><span class="p">,</span> <span class="s2">&quot;style&quot;</span><span class="p">):</span>
             <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;style&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">DEFAULT_DIALOG_STYLE</span> <span class="o">|</span> <span class="n">wx</span><span class="o">.</span><span class="n">RESIZE_BORDER</span>

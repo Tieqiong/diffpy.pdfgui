@@ -88,9 +88,8 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
-
-<span class="sd">&quot;&quot;&quot;class FitStructure for storage of one phase and related fitting parameters</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;Class FitStructure for storage of one phase and related fitting</span>
+<span class="sd">parameters.&quot;&quot;&quot;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
@@ -157,8 +156,8 @@
         <span class="k">return</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_update_custom_spacegroup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parser</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Helper method for read() and readStr(), which takes care</span>
-<span class="sd">        of setting custom_spacegroup after successful reading.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Helper method for read() and readStr(), which takes care of setting</span>
+<span class="sd">        custom_spacegroup after successful reading.</span>
 
 <span class="sd">        parser -- instance of StructureParser used in reading.</span>
 
@@ -180,9 +179,9 @@
 <div class="viewcode-block" id="FitStructure.read">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitstructure.FitStructure.read">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load structure from a file, raise ControlFileError for invalid</span>
-<span class="sd">        or unknown structure format.  Overloads PDFStructure.read()</span>
-<span class="sd">        to handle custom_spacegroup attribute.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load structure from a file, raise ControlFileError for invalid or</span>
+<span class="sd">        unknown structure format.  Overloads PDFStructure.read() to handle</span>
+<span class="sd">        custom_spacegroup attribute.</span>
 
 <span class="sd">        filename -- file to be loaded</span>
 <span class="sd">        format   -- structure format such as &#39;pdffit&#39;, &#39;pdb&#39;, &#39;xyz&#39;.  When</span>
@@ -203,11 +202,10 @@
 <div class="viewcode-block" id="FitStructure.readStr">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitstructure.FitStructure.readStr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">readStr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Same as PDFStructure.readStr, but handle the</span>
-<span class="sd">        custom_spacegroup data.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Same as PDFStructure.readStr, but handle the custom_spacegroup data.</span>
 
-<span class="sd">        Return instance of StructureParser used to load the data.</span>
-<span class="sd">        See Structure.readStr() for more info.</span>
+<span class="sd">        Return instance of StructureParser used to load the data. See</span>
+<span class="sd">        Structure.readStr() for more info.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">p</span> <span class="o">=</span> <span class="n">PDFStructure</span><span class="o">.</span><span class="n">readStr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
         <span class="c1"># update data only after successful reading</span>
@@ -220,6 +218,7 @@
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Map self.initial to self.</span>
+
 <span class="sd">        This is called only when normal attribute lookup fails.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;initial&quot;</span><span class="p">:</span>
@@ -230,7 +229,7 @@
         <span class="k">return</span> <span class="n">value</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getStrId</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;make a string identifier</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Make a string identifier.</span>
 
 <span class="sd">        return value: string id</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -262,9 +261,9 @@
 <div class="viewcode-block" id="FitStructure.findParameters">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitstructure.FitStructure.findParameters">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">findParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Obtain dictionary of parameters used by self.constraints.</span>
-<span class="sd">        The keys of returned dictionary are integer parameter indices, and</span>
-<span class="sd">        the values are Parameter instances, with guessed initial values.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Obtain dictionary of parameters used by self.constraints. The keys</span>
+<span class="sd">        of returned dictionary are integer parameter indices, and the values</span>
+<span class="sd">        are Parameter instances, with guessed initial values.</span>
 
 <span class="sd">        returns dictionary of indices and Parameter instances</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -309,8 +308,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">changeParameterIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">oldidx</span><span class="p">,</span> <span class="n">newidx</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Change a parameter index to a new value.</span>
 
-<span class="sd">        This will replace all instances of one parameter name with another in</span>
-<span class="sd">        this fit.</span>
+<span class="sd">        This will replace all instances of one parameter name with</span>
+<span class="sd">        another in this fit.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">:</span>
             <span class="n">formula</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">formula</span>
@@ -344,9 +343,9 @@
         <span class="k">return</span> <span class="n">rv</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_restoreAtomConstraints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">acd</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Restore self.constraints from atom constraints dictionary.  This</span>
-<span class="sd">        is useful for getting correct atom indices into refvar strings.</span>
-<span class="sd">        See also _popAtomConstraints()</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Restore self.constraints from atom constraints dictionary.  This is</span>
+<span class="sd">        useful for getting correct atom indices into refvar strings. See also</span>
+<span class="sd">        _popAtomConstraints()</span>
 
 <span class="sd">        acd -- dictionary obtained from _popAtomConstraints()</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -403,8 +402,8 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Perform supercell expansion for this structure and adjust</span>
 <span class="sd">        constraints for positions and lattice parameters.  New lattice</span>
 <span class="sd">        parameters are multiplied and fractional coordinates divided by</span>
-<span class="sd">        corresponding multiplier.  New atoms are grouped with their source</span>
-<span class="sd">        in the original cell.</span>
+<span class="sd">        corresponding multiplier.  New atoms are grouped with their source in</span>
+<span class="sd">        the original cell.</span>
 
 <span class="sd">        mno -- tuple or list of three positive integer cell multipliers along</span>
 <span class="sd">        the a, b, c axis</span>
@@ -483,9 +482,11 @@
 <div class="viewcode-block" id="FitStructure.getSpaceGroupList">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitstructure.FitStructure.getSpaceGroupList">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getSpaceGroupList</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a list of SpaceGroup instances sorted by International</span>
-<span class="sd">        Tables number.  When custom_spacegroup is defined, the list starts</span>
-<span class="sd">        with custom_spacegroup.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a list of SpaceGroup instances sorted by International Tables</span>
+<span class="sd">        number.</span>
+
+<span class="sd">        When custom_spacegroup is defined, the list starts with</span>
+<span class="sd">        custom_spacegroup.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">FitStructure</span><span class="o">.</span><span class="n">sorted_standard_space_groups</span><span class="p">:</span>
             <span class="kn">import</span><span class="w"> </span><span class="nn">diffpy.structure.spacegroups</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">SG</span>
@@ -512,9 +513,8 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Find space group in getSpaceGroupList() by short_name or number.</span>
 <span class="sd">        sgname can be non-standard in case of CIF file defined space group.</span>
 
-<span class="sd">        Return instance of SpaceGroup.</span>
-<span class="sd">        Raise ValueError if sgname cannot be found or when it is not present</span>
-<span class="sd">        in getSpaceGroupList().</span>
+<span class="sd">        Return instance of SpaceGroup. Raise ValueError if sgname cannot</span>
+<span class="sd">        be found or when it is not present in getSpaceGroupList().</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="kn">import</span><span class="w"> </span><span class="nn">diffpy.structure.spacegroups</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">SG</span>
 
@@ -533,11 +533,11 @@
 <div class="viewcode-block" id="FitStructure.expandAsymmetricUnit">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitstructure.FitStructure.expandAsymmetricUnit">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">expandAsymmetricUnit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spacegroup</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">sgoffset</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Perform symmetry expansion for atoms at given indices.</span>
-<span class="sd">        Temperature factors may be corrected to reflect the symmetry.</span>
-<span class="sd">        All constraints for expanded atoms are erased with the exception</span>
-<span class="sd">        of the occupancy(&quot;occ&quot;.  Constraints of unaffected atoms are adjusted</span>
-<span class="sd">        for new positions self.initial.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Perform symmetry expansion for atoms at given indices. Temperature</span>
+<span class="sd">        factors may be corrected to reflect the symmetry. All constraints for</span>
+<span class="sd">        expanded atoms are erased with the exception of the occupancy(&quot;occ&quot;.</span>
+<span class="sd">        Constraints of unaffected atoms are adjusted for new positions</span>
+<span class="sd">        self.initial.</span>
 
 <span class="sd">        spacegroup  -- instance of SpaceGroup from diffpy.structure</span>
 <span class="sd">        indices     -- list of integer indices of atoms to be expanded</span>
@@ -585,10 +585,9 @@
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitstructure.FitStructure.applySymmetryConstraints">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">applySymmetryConstraints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spacegroup</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">posflag</span><span class="p">,</span> <span class="n">Uijflag</span><span class="p">,</span> <span class="n">sgoffset</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate symmetry constraints for positions and thermal factors.</span>
-<span class="sd">        Both positions and thermal factors may get corrected to reflect</span>
-<span class="sd">        space group symmetry.  Old positional and thermal constraints get</span>
-<span class="sd">        erased.  New parameter indices start at fist decade after the last</span>
-<span class="sd">        used parameter.</span>
+<span class="sd">        Both positions and thermal factors may get corrected to reflect space</span>
+<span class="sd">        group symmetry.  Old positional and thermal constraints get erased. New</span>
+<span class="sd">        parameter indices start at fist decade after the last used parameter.</span>
 
 <span class="sd">        spacegroup  -- instance of SpaceGroup from diffpy.structure</span>
 <span class="sd">        indices     -- list of integer indices of atoms to be expanded</span>
@@ -665,9 +664,9 @@
 <div class="viewcode-block" id="FitStructure.setSelectedPairs">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitstructure.FitStructure.setSelectedPairs">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">setSelectedPairs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the value of selected_pairs to s, raise ControlValueError when</span>
-<span class="sd">        s has invalid syntax.  The selected_pairs is a comma separated list of</span>
-<span class="sd">        words formatted as</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the value of selected_pairs to s, raise ControlValueError when s</span>
+<span class="sd">        has invalid syntax.  The selected_pairs is a comma separated list of</span>
+<span class="sd">        words formatted as.</span>
 
 <span class="sd">            [!]{element|indexOrRange|all}-[!]{element|indexOrRange|all}</span>
 
@@ -858,7 +857,7 @@
 <div class="viewcode-block" id="FitStructure.copy">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitstructure.FitStructure.copy">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;copy self to other. if other is None, create new instance</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Copy self to other. if other is None, create new instance.</span>
 
 <span class="sd">        other -- reference to other object</span>
 
@@ -957,7 +956,7 @@
 <div class="viewcode-block" id="FitStructure.getYNames">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitstructure.FitStructure.getYNames">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getYNames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;get names of data item which can be plotted as y</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get names of data item which can be plotted as y.</span>
 
 <span class="sd">        returns a name str list</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -967,7 +966,7 @@
 <div class="viewcode-block" id="FitStructure.getXNames">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitstructure.FitStructure.getXNames">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getXNames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;get names of data item which can be plotted as x</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get names of data item which can be plotted as x.</span>
 
 <span class="sd">        returns a name str list</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -978,7 +977,7 @@
 <div class="viewcode-block" id="FitStructure.getData">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.fitstructure.FitStructure.getData">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">step</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;get self&#39;s data member</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get self&#39;s data member.</span>
 
 <span class="sd">        name -- data item name</span>
 <span class="sd">        step -- step info, it can be:</span>
@@ -1007,9 +1006,9 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">_makeParNames</span><span class="p">(</span><span class="n">sympars</span><span class="p">,</span> <span class="n">parzeroindex</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a tuple of (symbols, parvalues), where symbols is a list of</span>
 <span class="sd">    unique PDFFit parameter strings in &quot;@%i&quot; format and parvalues is a</span>
-<span class="sd">    dictionary of parameter indices and their values.</span>
-<span class="sd">    The symbols have indices 10n + (1, 2, 3) when referring to x, y, z, or</span>
-<span class="sd">    10n + (4, 5, 6, 7, 8, 9) when referring to Uij.</span>
+<span class="sd">    dictionary of parameter indices and their values. The symbols have indices</span>
+<span class="sd">    10n + (1, 2, 3) when referring to x, y, z, or 10n + (4, 5, 6, 7, 8, 9) when</span>
+<span class="sd">    referring to Uij.</span>
 
 <span class="sd">    sympars      -- pospars or Upars attribute of a SymmetryConstraints object</span>
 <span class="sd">                    Must be a sequence of symbols and values.</span>

@@ -88,9 +88,7 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
-
-<span class="sd">&quot;&quot;&quot;Structure plotting in an external viewer process.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;Structure plotting in an external viewer process.&quot;&quot;&quot;</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">print_function</span>
 
@@ -119,11 +117,10 @@
 <div class="viewcode-block" id="StructureViewer">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.control.html#diffpy.pdfgui.control.structureviewer.StructureViewer">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">StructureViewer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class for plotting structure in general structure viewer.</span>
-<span class="sd">    It takes care of creating temporary structure file in a desired</span>
-<span class="sd">    format and launching structure viewer as a background process.</span>
-<span class="sd">    The temporary files are removed when StructureViewer instance</span>
-<span class="sd">    goes out of scope.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class for plotting structure in general structure viewer. It takes care</span>
+<span class="sd">    of creating temporary structure file in a desired format and launching</span>
+<span class="sd">    structure viewer as a background process. The temporary files are removed</span>
+<span class="sd">    when StructureViewer instance goes out of scope.</span>
 
 <span class="sd">    Data attributes:</span>
 
@@ -143,10 +140,9 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">executable</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">argstr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fileformat</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create StructureViewer instance.  All arguments are optional,</span>
-<span class="sd">        they override defaults described in class docstring.  The</span>
-<span class="sd">        configuration can be changed later using setConfig method.</span>
-
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create StructureViewer instance.  All arguments are optional, they</span>
+<span class="sd">        override defaults described in class docstring.  The configuration can</span>
+<span class="sd">        be changed later using setConfig method.</span>
 
 <span class="sd">        executable -- path to the structure viewer executable</span>
 <span class="sd">        argstr     -- argument string for the viewer program, it can use</span>
@@ -240,7 +236,8 @@
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove temporary files created by this instance of StructureViewer.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove temporary files created by this instance of</span>
+<span class="sd">        StructureViewer.&quot;&quot;&quot;</span>
         <span class="c1"># short circuit if nothing has been created</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tmpdir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span>

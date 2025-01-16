@@ -99,9 +99,9 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">PDFPanel</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Mix-in class for all PDF gui panels.</span>
 
-<span class="sd">    This method is meant to be a secondary parent class for classed derived from</span>
-<span class="sd">    wx.Panel. It defines methods and member variables necessary to all panels in</span>
-<span class="sd">    the PDFgui.</span>
+<span class="sd">    This method is meant to be a secondary parent class for classed</span>
+<span class="sd">    derived from wx.Panel. It defines methods and member variables</span>
+<span class="sd">    necessary to all panels in the PDFgui.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
@@ -130,9 +130,10 @@
 <div class="viewcode-block" id="PDFPanel.setToolTips">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.pdfpanel.PDFPanel.setToolTips">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">setToolTips</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">toolTips</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets tooltips for controls</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets tooltips for controls.</span>
 
-<span class="sd">        @param toolTips: dictionary of the form {&#39;controlname&#39; : &#39;tooltip&#39;}</span>
+<span class="sd">        @param toolTips: dictionary of the form {&#39;controlname&#39; :</span>
+<span class="sd">        &#39;tooltip&#39;}</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">controlName</span><span class="p">,</span> <span class="n">tooltip</span> <span class="ow">in</span> <span class="n">toolTips</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">control</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">controlName</span><span class="p">)</span>

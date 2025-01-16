@@ -453,8 +453,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">__adjustFitRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check the fit range values.</span>
 
-<span class="sd">        The fit range values are set to their defaults (the data range) when the</span>
-<span class="sd">        fit range is nonsensical.</span>
+<span class="sd">        The fit range values are set to their defaults (the data range)</span>
+<span class="sd">        when the fit range is nonsensical.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;fitrmin&quot;</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">rmin</span> <span class="ow">or</span> <span class="n">value</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">fitrmax</span><span class="p">:</span>
@@ -483,8 +483,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">onSampling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>  <span class="c1"># wxGlade: DataSetConfigurePanel.&lt;event_handler&gt;</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Record how the data is to be sampled during the fit.</span>
 
-<span class="sd">        This does not use the event argument, so feel free to call this method</span>
-<span class="sd">        programmatically.</span>
+<span class="sd">        This does not use the event argument, so feel free to call this</span>
+<span class="sd">        method programmatically.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">si</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">radioBoxSampling</span><span class="o">.</span><span class="n">GetSelection</span><span class="p">()</span>
         <span class="n">oldsampling</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">getFitSamplingType</span><span class="p">()</span>

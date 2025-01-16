@@ -195,10 +195,8 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">setConstraintsData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the values in the constraints panel.</span>
 
-<span class="sd">        The values come from the constraints member dictionary.</span>
-<span class="sd">        dscale</span>
-<span class="sd">        qdamp</span>
-<span class="sd">        qbroad</span>
+<span class="sd">        The values come from the constraints member dictionary. dscale</span>
+<span class="sd">        qdamp qbroad</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">par</span><span class="p">,</span> <span class="n">ctrlName</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ctrlMap</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">textCtrl</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctrlName</span><span class="p">)</span>

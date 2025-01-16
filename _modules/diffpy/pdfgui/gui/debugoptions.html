@@ -88,19 +88,19 @@
 <span class="c1"># See LICENSE.txt for license information.</span>
 <span class="c1">#</span>
 <span class="c1">##############################################################################</span>
+<span class="sd">&quot;&quot;&quot;DebugOptions class for storing guess three time what.</span>
 
-<span class="sd">&quot;&quot;&quot;DebugOptions class for storing guess three time what</span>
-
-<span class="sd">There should be exactly one instance of DebugOptions in pdfguiglobals module.</span>
+<span class="sd">There should be exactly one instance of DebugOptions in pdfguiglobals</span>
+<span class="sd">module.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 
 <div class="viewcode-block" id="DebugOptions">
 <a class="viewcode-back" href="../../../../api/diffpy.pdfgui.gui.html#diffpy.pdfgui.gui.debugoptions.DebugOptions">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">DebugOptions</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;DebugOptions is a place to store various debugging options.</span>
-<span class="sd">    There should be just one instance defined in pdfguiglobals module.</span>
-<span class="sd">    It would be nice to have a simple way of setting them on command line</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;DebugOptions is a place to store various debugging options. There should</span>
+<span class="sd">    be just one instance defined in pdfguiglobals module. It would be nice to</span>
+<span class="sd">    have a simple way of setting them on command line.</span>
 
 <span class="sd">    Options in short and long forms:</span>
 <span class="sd">        noed, noerrordialog  -- [False], disable exceptions catching and</span>
@@ -137,8 +137,8 @@
         <span class="k">return</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Resolve values of short options.</span>
-<span class="sd">        This is called only when normal lookup fails.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Resolve values of short options. This is called only when normal</span>
+<span class="sd">        lookup fails.</span>
 
 <span class="sd">        returns value of short debug option</span>
 <span class="sd">        &quot;&quot;&quot;</span>
