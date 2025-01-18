@@ -16,10 +16,11 @@ jobs:
       matrix:
         os: [macos-13]
         python-version: ["3.13"]
+    env:
+      LATEST_PYTHON_VERSION: "3.13"
     steps:
       - name: Check out diffpy.pdfgui
         uses: actions/checkout@v4
-
       - name: Initialize miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
